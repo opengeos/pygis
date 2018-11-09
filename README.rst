@@ -16,7 +16,7 @@ pygis
 
 
 
-Python snippets for GIS
+Python snippets for geospatial analysis
 
 
 * Free software: MIT license

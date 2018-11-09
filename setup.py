@@ -33,7 +33,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
     ],
-    description="Python snippets for GIS",
+    description="Python snippets for geospatial analysis",
     entry_points={
         'console_scripts': [
             'pygis=pygis.cli:main',
