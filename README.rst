@@ -10,7 +10,7 @@ pygis
         :target: https://travis-ci.org/giswqs/pygis
 
 .. image:: https://readthedocs.org/projects/pygis/badge/?version=latest
-        :target: https://pygis.readthedocs.io/en/latest/?badge=latest
+        :target: https://py-gis.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
@@ -20,7 +20,7 @@ Python snippets for GIS
 
 
 * Free software: MIT license
-* Documentation: https://pygis.readthedocs.io.
+* Documentation: https://py-gis.readthedocs.io.
 
 
 Features
