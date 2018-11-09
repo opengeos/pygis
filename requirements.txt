@@ -1,3 +1,7 @@
+Click>=6.0
 requests
 googledrivedownloader
-
+numpy
+scikit-image
+matplotlib
+imageio
