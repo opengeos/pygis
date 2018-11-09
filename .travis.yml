@@ -3,7 +3,7 @@ python:
 - 3.6
 - 3.5
 - 3.4
-install: pip install -U tox-travis
+install: pip install -U tox-travis requests googledrivedownloader
 script: tox
 deploy:
   provider: pypi
