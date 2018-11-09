@@ -7,4 +7,4 @@ __email__ = 'giswqs@gmail.com'
 __version__ = '0.1.1'
 
 from .zipfile import *
-from .download import *
+from .download import download_from_gdrive, download_from_url
