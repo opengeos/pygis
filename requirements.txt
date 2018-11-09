@@ -1,3 +1,4 @@
+tox-travis
 requests
 googledrivedownloader
 
