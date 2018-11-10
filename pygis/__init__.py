@@ -8,3 +8,4 @@ __version__ = '0.1.2'
 
 from .zipfile import read_zipfile, write_zipfile, extract_zipfile, get_all_file_paths
 from .download import download_from_gdrive, download_from_url
+from .path import mkdir, rmdir
