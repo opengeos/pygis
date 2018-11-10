@@ -2,7 +2,6 @@
 pygis
 =====
 
-
 .. image:: https://img.shields.io/pypi/v/pygis.svg
         :target: https://pypi.python.org/pypi/pygis
 
@@ -13,20 +12,31 @@ pygis
         :target: https://py-gis.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
+.. image:: https://img.shields.io/badge/License-MIT-yellow.svg
+        :target: https://opensource.org/licenses/MIT
+
+.. image:: https://mybinder.org/badge.svg 
+        :target: https://mybinder.org/v2/gh/giswqs/pygis/master
+
+Author: Qiusheng Wu (https://wetlands.io | wqs@binghamton.edu)
 
 
+**pygis** is a collection of Python snippets for geospatial analysis.
 
-Python snippets for geospatial analysis
+* GitHub repo: https://github.com/giswqs/pygis
+* Documentation: https://py-pygis.readthedocs.io.
+* PyPI: https://pypi.org/project/pygis/
+* Binder: https://gishub.org/pygis-cloud
+* Free software: `MIT license`_
 
-
-* Free software: MIT license
-* Documentation: https://py-gis.readthedocs.io.
+.. _`MIT license`: https://en.wikipedia.org/wiki/MIT_License
 
 
 Features
 --------
 
-* TODO
+* Download files from direct URLs or shared files from Google Drive
+* Read and write zip files; extract files from zip files
 
 Credits
 -------
