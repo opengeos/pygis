@@ -2,6 +2,9 @@
 pygis
 =====
 
+.. image:: https://mybinder.org/badge_logo.svg 
+        :target: https://mybinder.org/v2/gh/giswqs/pygis/master
+
 .. image:: https://img.shields.io/pypi/v/pygis.svg
         :target: https://pypi.python.org/pypi/pygis
 
@@ -15,8 +18,6 @@ pygis
 .. image:: https://img.shields.io/badge/License-MIT-yellow.svg
         :target: https://opensource.org/licenses/MIT
 
-.. image:: https://mybinder.org/badge.svg 
-        :target: https://mybinder.org/v2/gh/giswqs/pygis/master
 
 Author: Qiusheng Wu (https://wetlands.io | wqs@binghamton.edu)
 
@@ -37,6 +38,17 @@ Features
 
 * Download files from direct URLs or shared files from Google Drive
 * Read and write zip files; extract files from zip files
+
+Examples
+--------
+.. code:: python
+
+  import pygis
+  url = "https://github.com/giswqs/lidar/raw/master/examples/lidar-dem.zip"
+  pygis.download_from_url(url, file_name='data.zip', unzip=False)
+  gfile_url = 'https://drive.google.com/file/d/1c6v-ep5-klb2J32Nuu1rSyqAc8kEtmdh'
+  pygis.download_from_gdrive(gfile_url, 'dem.zip')  
+  
 
 Credits
 -------
