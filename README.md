@@ -1,17 +1,12 @@
 # pygis
 
-
 [![image](https://img.shields.io/pypi/v/pygis.svg)](https://pypi.python.org/pypi/pygis)
-
 [![image](https://img.shields.io/conda/vn/conda-forge/pygis.svg)](https://anaconda.org/conda-forge/pygis)
-
 
 **A Python package for installing optional dependencies for geemap and leafmap.**
 
-
 -   Free software: MIT license
 -   Documentation: https://giswqs.github.io/pygis
-    
 
 ## Features
 
