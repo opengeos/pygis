@@ -5,12 +5,12 @@
 
 **A Python package for installing optional dependencies for geemap and leafmap.**
 
--   Free software: MIT license
--   Documentation: https://giswqs.github.io/pygis
+- Free software: MIT license
+- Documentation: https://pygis.gishub.org
 
 ## Features
 
--   TODO
+- TODO
 
 ## Credits
 
