@@ -1,8 +1,8 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+private/
 *.py[cod]
 *$py.class
-.vscode/
 
 # C extensions
 *.so
@@ -101,3 +101,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# IDE settings
+.vscode/
