@@ -1,3 +1,4 @@
+--find-links https://girder.github.io/large_image_wheels GDAL
 geemap>=0.13.8
 leafmap>=0.9.3
 datapane
@@ -8,7 +9,7 @@ ipygany
 ipynb-py-convert
 ipyvtklink
 laspy
-localtileserver
+localtileserver>=0.5.8
 mss
 netcdf4
 palettable
