@@ -12,16 +12,16 @@ laspy
 localtileserver>=0.5.8
 mss
 netcdf4
-palettable
 osmnx
 owslib
+palettable
 panel
 plotly
-psycopg2
+# psycopg2
 pydeck
 pyntcloud[LAS]
 pyvista
 rio-cogeo
 rioxarray
-sqlalchemy
+# sqlalchemy
 voila
