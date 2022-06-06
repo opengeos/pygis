@@ -1,4 +1,4 @@
---find-links https://girder.github.io/large_image_wheels GDAL
+# --find-links https://girder.github.io/large_image_wheels GDAL
 geemap>=0.13.8
 leafmap>=0.9.3
 datapane
