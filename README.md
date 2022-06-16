@@ -13,7 +13,7 @@
 - Free software: MIT license
 - Documentation: https://pygis.gishub.org
 
-[![](https://i.imgur.com/DOJ3oxp.png)](https://pygis.gishub.org)
+[![](https://i.imgur.com/bKFts2R.png)](https://pygis.gishub.org)
 
 ## Credits
 

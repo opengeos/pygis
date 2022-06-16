@@ -21,13 +21,13 @@ Currently, the `pygis` package only helps you install optional dependencies for 
 
 Installing optional dependencies for [geemap](https://geemap.org/) and [leafmap](https://leafmap.org/) with only one command.
 
-```
+```bash
 mamba install -c conda-forge pygis
 ```
 
 ## Video Tutorial
 
-[![Introducing pygis](images/thumbnail.png)](https://youtu.be/Y1xB7d2VbFY "Introducing pygis")
+[![Introducing pygis](images/thumbnail.png)](https://youtu.be/4eY4cmnOGVI "Introducing pygis")
 
 ## Conda-forge recipe
 
