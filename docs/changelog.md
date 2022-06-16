@@ -1,11 +1,8 @@
 # Changelog
 
-## v0.0.1 - Date
+## v0.2.0 - Jun 6, 2022
 
 **Improvement**:
 
--   TBD
-
-**New Features**:
-
--   TBD
+- Added dependencies
+- Updated mkdocs

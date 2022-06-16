@@ -1,0 +1,26 @@
+- geemap>=0.13.8
+- leafmap>=0.9.3
+- datapane
+- geopandas
+- here-map-widget-for-jupyter
+- keplergl
+- ipygany
+- ipynb-py-convert
+- ipyvtklink
+- laspy
+- localtileserver>=0.5.8
+- mss
+- netcdf4
+- osmnx
+- owslib
+- palettable
+- panel
+- plotly
+- # psycopg2
+- pydeck
+- pyntcloud[LAS]
+- pyvista
+- rio-cogeo
+- rioxarray
+- # sqlalchemy
+- voila
