@@ -35,12 +35,13 @@ The [recipe](https://github.com/conda-forge/pygis-feedstock/blob/main/recipe/met
 
     - python >=3.7
     - datapane
-    - geemap >=0.13.8
+    - geedim
+    - geemap >=0.14.0
     - geopandas
     - here-map-widget-for-jupyter
-    - keplergl
-    - leafmap >=0.9.3
     - ipynb-py-convert
+    - keplergl
+    - leafmap >=0.9.4
     - localtileserver >=0.5.8
     - netcdf4
     - osmnx
