@@ -1,6 +1,6 @@
 # --find-links https://girder.github.io/large_image_wheels GDAL
 datapane
-geedim
+geedim>=1.2.0
 geemap>=0.14.0
 geopandas
 here-map-widget-for-jupyter
