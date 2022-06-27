@@ -8,6 +8,7 @@ ipynb-py-convert
 keplergl
 leafmap>=0.9.4
 localtileserver>=0.5.8
+mapclassify>=2.4.0
 mss
 netcdf4
 osmnx
