@@ -16,6 +16,7 @@ owslib
 palettable
 plotly
 pydeck
+retry
 rio-cogeo
 rioxarray
 voila
