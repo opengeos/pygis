@@ -1,13 +1,14 @@
 # --find-links https://girder.github.io/large_image_wheels GDAL
+bokeh
 datapane
-geedim>=1.3.2
-geemap>=0.15.5
+geedim>=1.6.1
+geemap>=0.18.1
 geopandas
 here-map-widget-for-jupyter
 ipynb-py-convert
 keplergl
-leafmap>=0.10.3
-localtileserver>=0.5.8
+leafmap>=0.14.0
+localtileserver>=0.6.1
 mapclassify>=2.4.0
 mss
 netcdf4
@@ -20,9 +21,10 @@ retry
 rio-cogeo
 rioxarray
 voila
-ipython>=7.34.0
-ipykernel>=6.15.1
-debugpy>=1.6.2
+# ipython>=7.34.0
+# ipykernel>=6.15.1
+# debugpy>=1.6.2
+# lxml>=4.9.1
 # ipygany
 # ipyvtklink
 # laspy
