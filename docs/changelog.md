@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.6.0 - Jun 19, 2022
+
+- Added geemap extra packages
+
 ## v0.5.0 - Nov 29, 2022
 
 - Updated geemap and leafmap versions
