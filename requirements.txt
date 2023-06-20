@@ -1,10 +1,14 @@
 # --find-links https://girder.github.io/large_image_wheels GDAL
 bokeh
+ffmpeg-python
+gdown
+geeadd
 geedim>=1.6.1
-geemap>=0.18.1
+geemap>=0.22.1
+geojson
 geopandas
 ipynb-py-convert
-leafmap>=0.14.0
+leafmap>=0.21.3
 localtileserver>=0.6.1
 mapclassify>=2.4.0
 mss
@@ -13,9 +17,12 @@ osmnx
 owslib
 palettable
 plotly
+pycrs
 retry
 rio-cogeo
 rioxarray
+sankee
+whiteboxgui
 # datapane
 # pydeck
 # here-map-widget-for-jupyter
