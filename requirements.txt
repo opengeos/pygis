@@ -23,10 +23,11 @@ rio-cogeo
 rioxarray
 sankee
 whiteboxgui
+pydeck
+keplergl
 # datapane
 # pydeck
 # here-map-widget-for-jupyter
-# keplergl
 # voila
 # ipython>=7.34.0
 # ipykernel>=6.15.1
