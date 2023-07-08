@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.6.1 - JUl 8, 2022
+
+- Added kaleido, pydeck, and keplergl
+
 ## v0.6.0 - Jun 19, 2022
 
 - Added geemap extra packages
