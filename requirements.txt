@@ -4,13 +4,13 @@ ffmpeg-python
 gdown
 geeadd
 geedim>=1.6.1
-geemap>=0.30.4
+geemap>=0.32.0
 geojson
 geopandas
 ipynb-py-convert
 kaleido
-leafmap>=0.31.0
-localtileserver>=0.6.1
+leafmap>=0.31.5
+localtileserver>=0.10.0
 mapclassify>=2.4.0
 mss
 netcdf4
@@ -25,7 +25,7 @@ rioxarray
 sankee
 whiteboxgui
 pydeck
-keplergl
+# keplergl
 # datapane
 # pydeck
 # here-map-widget-for-jupyter
