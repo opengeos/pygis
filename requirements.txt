@@ -19,12 +19,12 @@ owslib
 palettable
 plotly
 pycrs
+pydeck
 retry
 rio-cogeo
 rioxarray
 sankee
 whiteboxgui
-pydeck
 # keplergl
 # datapane
 # pydeck
