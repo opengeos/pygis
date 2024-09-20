@@ -4,7 +4,7 @@ ffmpeg-python
 gdown
 geeadd
 geedim>=1.6.1
-geemap>=0.34.2
+geemap>=0.34.3
 geojson
 geopandas
 ipynb-py-convert
@@ -20,7 +20,6 @@ owslib
 palettable
 plotly
 pycrs
-pydeck
 retry
 rio-cogeo
 rioxarray
@@ -40,6 +39,7 @@ whiteboxgui
 # laspy
 # panel
 # psycopg2
+# pydeck
 # pyntcloud[LAS]
 # pyvista
 # sqlalchemy
