@@ -11,7 +11,7 @@ The pygis package has many dependencies, such as [GeoPandas](https://geopandas.o
 [uv](https://docs.astral.sh/uv/) us an extremely fast Python package and project manager, written in Rust. It is designed to be a drop-in replacement for pip. You can install `pygis` using `uv` as follows:
 
 ```bash
-uv pip install ppygis
+uv pip install pygis
 uv pip install gdal pyproj --find-links https://girder.github.io/large_image_wheels
 ```
 
@@ -66,14 +66,14 @@ pip install --find-links=https://girder.github.io/large_image_wheels --no-cache 
 pip install pygis
 ```
 
-All optional dependencies of pygis are listed in [requirements_dev.txt](https://github.com/giswqs/pygis/blob/master/requirements_dev.txt).
+All optional dependencies of pygis are listed in [requirements_dev.txt](https://github.com/opengeos/pygis/blob/master/requirements_dev.txt).
 
 ## Installing from source
 
 You may install the latest development version by cloning the GitHub repository with [Git](https://git-scm.com) and using pip to install from the local directory:
 
 ```bash
-git clone https://github.com/giswqs/pygis.git
+git clone https://github.com/opengeos/pygis.git
 cd pygis
 pip install .
 ```
@@ -81,7 +81,7 @@ pip install .
 It is also possible to install the latest development version directly from the GitHub repository with:
 
 ```bash
-pip install git+https://github.com/giswqs/pygis.git
+pip install git+https://github.com/opengeos/pygis.git
 ```
 
 ## Upgrading pygis
