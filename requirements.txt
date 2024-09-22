@@ -8,7 +8,7 @@ geemap>=0.34.3
 geojson
 geopandas
 ipynb-py-convert
-kaleido
+# kaleido
 leafmap>=0.37.5
 localtileserver>=0.10.0
 mapclassify>=2.4.0
