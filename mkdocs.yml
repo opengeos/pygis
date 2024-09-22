@@ -1,8 +1,8 @@
 site_name: pygis
 
-site_url: https://giswqs.github.io/pygis
+site_url: https://pygis.gishub.org/
 
-repo_url: https://github.com/giswqs/pygis
+repo_url: https://github.com/opengeos/pygis
 
 theme:
   palette:
@@ -47,6 +47,6 @@ nav:
   - Contributing: contributing.md
   # - FAQ: faq.md
   - Changelog: changelog.md
-  - Report Issues: https://github.com/giswqs/pygis/issues
+  - Report Issues: https://github.com/opengeos/pygis/issues
   - API Reference:
       - pygis module: pygis.md
