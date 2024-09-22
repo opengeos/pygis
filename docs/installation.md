@@ -2,9 +2,18 @@
 
 The pygis package has many dependencies, such as [GeoPandas](https://geopandas.org), [rasterio](https://rasterio.readthedocs.io/), and [localtileserver](https://github.com/banesullivan/localtileserver). These optional dependencies can sometimes be a challenge to install, especially on Windows. Therefore, we advise you to closely follow the recommendations below to avoid installation problems.
 
-<!-- ## Video Tutorial
+## Video Tutorial
 
-[![Introducing pygis](images/thumbnail.png)](https://youtu.be/Y1xB7d2VbFY "Introducing pygis") -->
+[![Introducing pygis](images/thumbnail.png)](https://youtu.be/Y1xB7d2VbFY "Introducing pygis")
+
+## Installing with uv
+
+[uv](https://docs.astral.sh/uv/) us an extremely fast Python package and project manager, written in Rust. It is designed to be a drop-in replacement for pip. You can install `pygis` using `uv` as follows:
+
+```bash
+uv pip install pygis
+uv pip install gdal pyproj --find-links https://girder.github.io/large_image_wheels
+```
 
 ## Installing with Anaconda/Miniconda
 
@@ -25,7 +34,7 @@ Creating a new environment is not strictly necessary, but given that some pygis 
 The following commands create a new conda environment with the name `geo` and install pygis and its dependencies (e.g., GeoPandas, localtileserver) in it:
 
 ```bash
-conda create -n geo python=3.9
+conda create -n geo python=3.12
 conda activate geo
 conda install pygis -c conda-forge
 ```
@@ -41,7 +50,7 @@ conda install -c conda-forge pygis
 When installing packages using the conda package manager, sometimes it can take a while for conda to resolve dependencies. If it takes too long or fails to resolve dependencies, you can try using the [Mamba](https://mamba.readthedocs.io/en/latest) package manager to install pygis and its dependencies. Mamba is a fast, robust, and cross-platform package manager. It runs on Windows, macOS, and Linux, and is fully compatible with conda packages and supports most of conda’s commands. Once Mamba is installed in a conda environment, you can then simply replace any `conda` command with `mamba`. For example, to install pygis and its dependencies with Mamba, you can use the following commands:
 
 ```bash
-conda create -n geo python=3.9
+conda create -n geo python=3.12
 conda activate geo
 conda install -c conda-forge mamba
 mamba install -c conda-forge gdal
@@ -57,14 +66,14 @@ pip install --find-links=https://girder.github.io/large_image_wheels --no-cache 
 pip install pygis
 ```
 
-All optional dependencies of pygis are listed in [requirements_dev.txt](https://github.com/giswqs/pygis/blob/master/requirements_dev.txt).
+All optional dependencies of pygis are listed in [requirements_dev.txt](https://github.com/opengeos/pygis/blob/master/requirements_dev.txt).
 
 ## Installing from source
 
 You may install the latest development version by cloning the GitHub repository with [Git](https://git-scm.com) and using pip to install from the local directory:
 
 ```bash
-git clone https://github.com/giswqs/pygis.git
+git clone https://github.com/opengeos/pygis.git
 cd pygis
 pip install .
 ```
@@ -72,7 +81,7 @@ pip install .
 It is also possible to install the latest development version directly from the GitHub repository with:
 
 ```bash
-pip install git+https://github.com/giswqs/pygis.git
+pip install git+https://github.com/opengeos/pygis.git
 ```
 
 ## Upgrading pygis

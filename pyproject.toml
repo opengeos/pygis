@@ -10,7 +10,7 @@ dynamic = [
 ]
 description = "A Python package for installing optional dependencies for geemap and leafmap."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 license = {text = "MIT license"}
 keywords = ["pygis"]
 classifiers = [
