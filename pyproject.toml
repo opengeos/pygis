@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pygis"
-version = "0.6.5"
+version = "0.6.6"
 dynamic = [
     "dependencies",
 ]
@@ -39,7 +39,7 @@ dependencies = {file = ["requirements.txt"]}
 universal = true
 
 [tool.bumpversion]
-current_version = "0.6.5"
+current_version = "0.6.6"
 commit = true
 tag = true
 
