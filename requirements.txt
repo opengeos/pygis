@@ -4,12 +4,12 @@ ffmpeg-python
 gdown
 geeadd
 geedim>=1.6.1
-geemap>=0.34.3
+geemap>=0.35.1
 geojson
 geopandas
 ipynb-py-convert
 # kaleido
-leafmap>=0.37.5
+leafmap>=0.42.4
 localtileserver>=0.10.0
 mapclassify>=2.4.0
 mss
