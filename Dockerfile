@@ -24,7 +24,6 @@ RUN mamba install -n base -c conda-forge -y \
     proj \
     geos \
     pyproj \
-    pygis \
     && mamba clean --all --yes \
     && fix-permissions $CONDA_DIR
 

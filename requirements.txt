@@ -16,9 +16,11 @@ maplibre
 mapwidget
 numpy
 pandas
+planetary-computer
 pmtiles
 rasterio
 rioxarray
+shapely
 solara
 voila
 voila-topbar
