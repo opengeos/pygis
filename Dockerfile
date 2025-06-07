@@ -59,7 +59,8 @@ ENV SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYGIS=0.0.0
 RUN pip install -U . && \
     rm -rf ./build ./dist *.egg-info && \
     mkdir -p /home/jovyan/work && \
-    fix-permissions /home/jovyan
+    fix-permissions /home/jovyan && \
+    rm -rf /home/jovyan/pygis
 
 # ------------------------------
 # 6. Switch back to default user
