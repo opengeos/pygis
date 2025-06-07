@@ -1,17 +1,22 @@
 # --find-links https://girder.github.io/large_image_wheels GDAL
 duckdb
+earthaccess
 ffmpeg-python
+fiona
 geeadd
 geedim
 geemap
 geopandas
 hypercoast
+ipykernel
 # kaleido
 leafmap
 mapclassify
 maplibre
+mapwidget
 numpy
 pandas
+pmtiles
 rasterio
 rioxarray
 solara
