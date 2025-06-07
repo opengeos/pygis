@@ -7,5 +7,6 @@ geemap
 kaleido
 leafmap
 mapclassify
+maplibre
 pycrs
 rioxarray
