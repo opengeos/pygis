@@ -1,0 +1,1626 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pygis.gishub.org/">
+      
+      
+      
+        <link rel="next" href="installation/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>pygis</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="preference" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#welcome-to-pygis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="pygis" class="md-header__button md-logo" aria-label="pygis" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pygis
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/opengeos/pygis" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="pygis" class="md-nav__button md-logo" aria-label="pygis" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    pygis
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/opengeos/pygis" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video Tutorial
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conda-forge-recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda-forge recipe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installed-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installed packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Usage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contributing
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/opengeos/pygis/issues" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Report Issues
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    API Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            API Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pygis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pygis module
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disclaimer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-tutorial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video Tutorial
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conda-forge-recipe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda-forge recipe
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installed-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installed packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#credits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Credits
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+
+
+                  
+
+
+  
+  
+
+
+<h1 id="welcome-to-pygis">Welcome to pygis<a class="headerlink" href="#welcome-to-pygis" title="Permanent link">&para;</a></h1>
+<p><a href="https://pypi.python.org/pypi/pygis"><img alt="image" src="https://img.shields.io/pypi/v/pygis.svg" /></a>
+<a href="https://anaconda.org/conda-forge/pygis"><img alt="image" src="https://img.shields.io/conda/vn/conda-forge/pygis.svg" /></a>
+<a href="https://pepy.tech/project/pygis"><img alt="image" src="https://pepy.tech/badge/pygis" /></a>
+<a href="https://anaconda.org/conda-forge/pygis"><img alt="Conda Downloads" src="https://img.shields.io/conda/dn/conda-forge/pygis.svg" /></a>
+<a href="https://github.com/conda-forge/pygis-feedstock"><img alt="Conda Recipe" src="https://img.shields.io/badge/recipe-pygis-green.svg" /></a>
+<a href="https://www.youtube.com/c/QiushengWu"><img alt="image" src="https://img.shields.io/badge/YouTube-Channel-red" /></a>
+<a href="https://twitter.com/giswqs"><img alt="image" src="https://img.shields.io/twitter/follow/giswqs?style=social" /></a></p>
+<p><strong>A Python package for installing optional dependencies for geemap and leafmap.</strong></p>
+<ul>
+<li>Free software: MIT license</li>
+<li>Documentation: <a href="https://pygis.gishub.org">https://pygis.gishub.org</a></li>
+</ul>
+<h2 id="disclaimer">Disclaimer<a class="headerlink" href="#disclaimer" title="Permanent link">&para;</a></h2>
+<p>Currently, the <code>pygis</code> package only helps you install optional dependencies for <a href="https://geemap.org/">geemap</a> and <a href="https://leafmap.org/">leafmap</a>, making it easier to set up a conda environment for geospatial analysis and avoid dependency conflicts during installation. The <code>pygis</code> package itself does not have any meaningful functions yet. After installation, you can continue to the commonly used geospatial packages as usual.</p>
+<h2 id="video-tutorial">Video Tutorial<a class="headerlink" href="#video-tutorial" title="Permanent link">&para;</a></h2>
+<p><a href="https://youtu.be/4eY4cmnOGVI" title="Introducing pygis"><img alt="Introducing pygis" src="images/thumbnail.png" /></a></p>
+<h2 id="conda-forge-recipe">Conda-forge recipe<a class="headerlink" href="#conda-forge-recipe" title="Permanent link">&para;</a></h2>
+<p>The <a href="https://github.com/conda-forge/pygis-feedstock/blob/main/recipe/meta.yaml">recipe</a> of the pygis Python package on the conda-forge channel:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code>- python &gt;=3.7
+- datapane
+- geedim
+- geemap &gt;=0.14.0
+- geopandas
+- here-map-widget-for-jupyter
+- ipynb-py-convert
+- keplergl
+- leafmap &gt;=0.9.4
+- localtileserver &gt;=0.5.8
+- netcdf4
+- osmnx
+- owslib
+- palettable
+- plotly
+- pydeck
+- python-mss
+- rio-cogeo
+- rioxarray
+- voila
+</code></pre></div></td></tr></table></div>
+<h2 id="installed-packages">Installed packages<a class="headerlink" href="#installed-packages" title="Permanent link">&para;</a></h2>
+<p>The complete list of Python packages that will be installed along with pygis.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>!conda<span class="w"> </span>list
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span></pre></div></td><td class="code"><div><pre><span></span><code># Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                 conda_forge    conda-forge
+_openmp_mutex             4.5                  2_kmp_llvm    conda-forge
+abseil-cpp                20211102.0           h27087fc_1    conda-forge
+affine                    2.3.1              pyhd8ed1ab_0    conda-forge
+aiohttp                   3.8.1            py39hb9d737c_1    conda-forge
+aiosignal                 1.2.0              pyhd8ed1ab_0    conda-forge
+alsa-lib                  1.2.3.2              h166bdaf_0    conda-forge
+altair                    4.2.0              pyhd8ed1ab_1    conda-forge
+aniso8601                 9.0.1              pyhd8ed1ab_0    conda-forge
+anyio                     3.6.1            py39hf3d152e_0    conda-forge
+aom                       3.3.0                h27087fc_1    conda-forge
+argon2-cffi               21.1.0           py39h3811e60_2    conda-forge
+arrow-cpp                 6.0.1           py39h15c4769_19_cpu    conda-forge
+asttokens                 2.0.5              pyhd8ed1ab_0    conda-forge
+async-timeout             4.0.2              pyhd8ed1ab_0    conda-forge
+attr                      2.5.1                h166bdaf_0    conda-forge
+attrs                     21.4.0             pyhd8ed1ab_0    conda-forge
+aws-c-cal                 0.5.11               h95a6274_0    conda-forge
+aws-c-common              0.6.2                h7f98852_0    conda-forge
+aws-c-event-stream        0.2.7               h3541f99_13    conda-forge
+aws-c-io                  0.10.5               hfb6a706_0    conda-forge
+aws-checksums             0.1.11               ha31a3da_7    conda-forge
+aws-sdk-cpp               1.8.186              hb4091e7_3    conda-forge
+babel                     2.10.2             pyhd8ed1ab_0    conda-forge
+backcall                  0.2.0              pyh9f0ad1d_0    conda-forge
+backoff                   1.11.1             pyhd8ed1ab_0    conda-forge
+backports                 1.0                        py_2    conda-forge
+backports.functools_lru_cache 1.6.4              pyhd8ed1ab_0    conda-forge
+beautifulsoup4            4.11.1             pyha770c72_0    conda-forge
+bleach                    5.0.0              pyhd8ed1ab_0    conda-forge
+blosc                     1.21.1               h83bc5f7_3    conda-forge
+boltons                   21.0.0             pyhd8ed1ab_0    conda-forge
+boost-cpp                 1.74.0               h6cacc03_7    conda-forge
+bqplot                    0.12.33            pyhd8ed1ab_0    conda-forge
+branca                    0.4.2              pyhd8ed1ab_0    conda-forge
+brotli                    1.0.9                h166bdaf_7    conda-forge
+brotli-bin                1.0.9                h166bdaf_7    conda-forge
+brotlipy                  0.7.0           py39hb9d737c_1004    conda-forge
+bzip2                     1.0.8                h7f98852_4    conda-forge
+c-ares                    1.18.1               h7f98852_0    conda-forge
+ca-certificates           2022.6.15            ha878542_0    conda-forge
+cachetools                4.2.4              pyhd8ed1ab_0    conda-forge
+cairo                     1.16.0            ha12eb4b_1010    conda-forge
+certifi                   2022.6.15        py39hf3d152e_0    conda-forge
+cffi                      1.15.0           py39hd667e15_1
+cfitsio                   4.1.0                hd9d235c_0    conda-forge
+cftime                    1.6.0            py39hd257fcd_1    conda-forge
+chardet                   4.0.0            py39hf3d152e_3    conda-forge
+charset-normalizer        2.0.12             pyhd8ed1ab_0    conda-forge
+click                     8.1.3            py39hf3d152e_0    conda-forge
+click-plugins             1.1.1                      py_0    conda-forge
+click-spinner             0.1.10             pyh9f0ad1d_0    conda-forge
+cligj                     0.7.2              pyhd8ed1ab_1    conda-forge
+colorama                  0.4.4              pyh9f0ad1d_0    conda-forge
+colorlog                  6.6.0            py39hf3d152e_1    conda-forge
+colour                    0.1.5                      py_0    conda-forge
+conda                     4.13.0           py39hf3d152e_1    conda-forge
+conda-package-handling    1.8.1            py39hb9d737c_1    conda-forge
+cryptography              37.0.2           py39hd97740a_0    conda-forge
+curl                      7.83.1               h7bff187_0    conda-forge
+cycler                    0.11.0             pyhd8ed1ab_0    conda-forge
+dacite                    1.6.0              pyhd3deb0d_0    conda-forge
+dataclasses               0.8                pyhc8e2a94_3    conda-forge
+datapane                  0.14.0             pyhd8ed1ab_0    conda-forge
+dbus                      1.13.6               h5008d03_3    conda-forge
+debugpy                   1.6.0            py39h5a03fae_0    conda-forge
+decorator                 5.1.1              pyhd8ed1ab_0    conda-forge
+defusedxml                0.7.1              pyhd8ed1ab_0    conda-forge
+dominate                  2.6.0              pyhd8ed1ab_0    conda-forge
+earthengine-api           0.1.315            pyhd8ed1ab_0    conda-forge
+ee_extra                  0.0.13             pyhd8ed1ab_0    conda-forge
+entrypoints               0.4                pyhd8ed1ab_0    conda-forge
+executing                 0.8.3              pyhd8ed1ab_0    conda-forge
+expat                     2.4.8                h27087fc_0    conda-forge
+face                      20.1.1                     py_0    conda-forge
+ffmpeg                    5.0.1                h594f047_0    conda-forge
+ffmpeg-python             0.2.0                      py_0    conda-forge
+fftw                      3.3.10          nompi_h77c792f_102    conda-forge
+filelock                  3.7.1              pyhd8ed1ab_0    conda-forge
+fiona                     1.8.21           py39h83acdc4_1    conda-forge
+flask                     2.1.2              pyhd8ed1ab_1    conda-forge
+flask-caching             1.10.1             pyhd8ed1ab_0    conda-forge
+flask-cors                3.0.10             pyhd8ed1ab_0    conda-forge
+flask-restx               0.5.1              pyhd8ed1ab_0    conda-forge
+folium                    0.12.1.post1       pyhd8ed1ab_1    conda-forge
+font-ttf-dejavu-sans-mono 2.37                 hab24e00_0    conda-forge
+font-ttf-inconsolata      3.000                h77eed37_0    conda-forge
+font-ttf-source-code-pro  2.038                h77eed37_0    conda-forge
+font-ttf-ubuntu           0.83                 hab24e00_0    conda-forge
+fontconfig                2.14.0               h8e229c2_0    conda-forge
+fonts-conda-ecosystem     1                             0    conda-forge
+fonts-conda-forge         1                             0    conda-forge
+fonttools                 4.33.3           py39hb9d737c_0    conda-forge
+freetype                  2.10.4               h0708190_1    conda-forge
+freexl                    1.0.6                h7f98852_0    conda-forge
+frozenlist                1.3.0            py39hb9d737c_1    conda-forge
+furl                      2.1.3              pyhd8ed1ab_0    conda-forge
+future                    0.18.2           py39hf3d152e_5    conda-forge
+gdal                      3.4.3            py39hc691d54_0    conda-forge
+gdown                     4.4.0              pyhd8ed1ab_0    conda-forge
+geeadd                    0.5.4              pyhd8ed1ab_0    conda-forge
+geemap                    0.13.11            pyhd8ed1ab_0    conda-forge
+geocoder                  1.38.1                     py_1    conda-forge
+geojson                   2.5.0                      py_0    conda-forge
+geopandas                 0.10.2             pyhd8ed1ab_1    conda-forge
+geopandas-base            0.10.2             pyha770c72_1    conda-forge
+geos                      3.10.2               h9c3ff4c_0    conda-forge
+geotiff                   1.7.1                h509b78c_1    conda-forge
+gettext                   0.19.8.1          h73d1719_1008    conda-forge
+gflags                    2.2.2             he1b5a44_1004    conda-forge
+giflib                    5.2.1                h36c2ea0_2    conda-forge
+glog                      0.6.0                h6f12383_0    conda-forge
+glom                      20.11.0            pyhd3deb0d_0    conda-forge
+gmp                       6.2.1                h58526e2_0    conda-forge
+gnutls                    3.6.13               h85f3911_1    conda-forge
+google-api-core           1.31.5             pyhd8ed1ab_0    conda-forge
+google-api-python-client  1.12.8             pyhd3deb0d_0    conda-forge
+google-auth               1.35.0             pyh6c4a22f_0    conda-forge
+google-auth-httplib2      0.1.0              pyhd8ed1ab_1    conda-forge
+google-cloud-core         2.3.1              pyhd8ed1ab_0    conda-forge
+google-cloud-storage      2.4.0              pyh6c4a22f_0    conda-forge
+google-crc32c             1.1.2            py39h8db88ab_3    conda-forge
+google-resumable-media    2.3.3              pyhd8ed1ab_0    conda-forge
+googleapis-common-protos  1.56.2           py39hf3d152e_0    conda-forge
+grpc-cpp                  1.45.2               he70e3f0_3    conda-forge
+grpcio                    1.46.3           py39h0f497a6_0    conda-forge
+gst-plugins-base          1.18.5               hf529b03_3    conda-forge
+gstreamer                 1.20.2               hd4edc92_1    conda-forge
+hdf4                      4.2.15               h10796ff_3    conda-forge
+hdf5                      1.12.1          nompi_h2386368_104    conda-forge
+here-map-widget-for-jupyter 1.1.3              pyhd8ed1ab_0    conda-forge
+httplib2                  0.20.4             pyhd8ed1ab_0    conda-forge
+httplib2shim              0.0.3              pyh9f0ad1d_0    conda-forge
+icu                       69.1                 h9c3ff4c_0    conda-forge
+idna                      3.3                pyhd8ed1ab_0    conda-forge
+importlib-metadata        4.11.4           py39hf3d152e_0    conda-forge
+importlib_metadata        4.11.4               hd8ed1ab_0    conda-forge
+importlib_resources       5.7.1              pyhd8ed1ab_1    conda-forge
+ipyevents                 2.0.1              pyhd8ed1ab_0    conda-forge
+ipyfilechooser            0.6.0              pyhd8ed1ab_0    conda-forge
+ipykernel                 6.14.0           py39hef51801_0    conda-forge
+ipyleaflet                0.16.0             pyhd8ed1ab_4    conda-forge
+ipynb-py-convert          0.4.6              pyh9f0ad1d_0    conda-forge
+ipysheet                  0.5.0              pyhd8ed1ab_0    conda-forge
+ipython                   8.4.0            py39hf3d152e_0    conda-forge
+ipython_genutils          0.2.0                      py_1    conda-forge
+ipytree                   0.2.1              pyhd8ed1ab_0    conda-forge
+ipywidgets                7.7.0              pyhd8ed1ab_0    conda-forge
+itsdangerous              2.1.2              pyhd8ed1ab_0    conda-forge
+jack                      1.9.18            hfd4fe87_1001    conda-forge
+jedi                      0.18.1           py39hf3d152e_1    conda-forge
+jinja2                    3.0.3              pyhd8ed1ab_0    conda-forge
+joblib                    1.1.0              pyhd8ed1ab_0    conda-forge
+jpeg                      9e                   h166bdaf_1    conda-forge
+json-c                    0.16                 hc379101_0    conda-forge
+json5                     0.9.5              pyh9f0ad1d_0    conda-forge
+jsonschema                4.6.0              pyhd8ed1ab_0    conda-forge
+jupyter_client            7.3.4              pyhd8ed1ab_0    conda-forge
+jupyter_core              4.10.0           py39hf3d152e_0    conda-forge
+jupyter_server            1.17.1             pyhd8ed1ab_0    conda-forge
+jupyterlab                3.4.3              pyhd8ed1ab_0    conda-forge
+jupyterlab_pygments       0.2.2              pyhd8ed1ab_0    conda-forge
+jupyterlab_server         2.14.0             pyhd8ed1ab_0    conda-forge
+jupyterlab_widgets        1.1.0              pyhd8ed1ab_0    conda-forge
+kealib                    1.4.14               hfe1a663_4    conda-forge
+keplergl                  0.3.2              pyhd8ed1ab_0    conda-forge
+keyutils                  1.6.1                h166bdaf_0    conda-forge
+kiwisolver                1.4.3            py39hf939315_0    conda-forge
+krb5                      1.19.3               h3790be6_0    conda-forge
+lame                      3.100             h7f98852_1001    conda-forge
+large-image               1.14.5             pyhd8ed1ab_0    conda-forge
+large-image-source-gdal   1.14.5             pyhd8ed1ab_0    conda-forge
+lcms2                     2.12                 hddcbb42_0    conda-forge
+ld_impl_linux-64          2.38                 h1181459_1
+leafmap                   0.9.4              pyhd8ed1ab_0    conda-forge
+lerc                      3.0                  h9c3ff4c_0    conda-forge
+libarchive                3.5.2                hccf745f_1    conda-forge
+libblas                   3.9.0           15_linux64_openblas    conda-forge
+libbrotlicommon           1.0.9                h166bdaf_7    conda-forge
+libbrotlidec              1.0.9                h166bdaf_7    conda-forge
+libbrotlienc              1.0.9                h166bdaf_7    conda-forge
+libcap                    2.64                 ha37c62d_0    conda-forge
+libcblas                  3.9.0           15_linux64_openblas    conda-forge
+libclang                  13.0.1          default_hc23dcda_0    conda-forge
+libcrc32c                 1.1.2                h9c3ff4c_0    conda-forge
+libcups                   2.3.3                hf5a7f15_1    conda-forge
+libcurl                   7.83.1               h7bff187_0    conda-forge
+libdap4                   3.20.6               hd7c4107_2    conda-forge
+libdb                     6.2.32               h9c3ff4c_0    conda-forge
+libdeflate                1.12                 h166bdaf_0    conda-forge
+libdrm                    2.4.111              h166bdaf_0    conda-forge
+libedit                   3.1.20191231         he28a2e2_2    conda-forge
+libev                     4.33                 h516909a_1    conda-forge
+libevent                  2.1.10               h9b69904_4    conda-forge
+libffi                    3.4.2                h7f98852_5    conda-forge
+libflac                   1.3.4                h27087fc_0    conda-forge
+libgcc-ng                 12.1.0              h8d9b700_16    conda-forge
+libgdal                   3.4.3                h56144a5_0    conda-forge
+libgfortran-ng            12.1.0              h69a702a_16    conda-forge
+libgfortran5              12.1.0              hdcd56e2_16    conda-forge
+libglib                   2.70.2               h174f98d_4    conda-forge
+libiconv                  1.16                 h516909a_0    conda-forge
+libkml                    1.3.0             h238a007_1014    conda-forge
+liblapack                 3.9.0           15_linux64_openblas    conda-forge
+libllvm13                 13.0.1               hf817b99_2    conda-forge
+libmamba                  0.24.0               hd8a31e3_1    conda-forge
+libmambapy                0.24.0           py39hd55135b_1    conda-forge
+libnetcdf                 4.8.1           nompi_h329d8a1_102    conda-forge
+libnghttp2                1.47.0               h727a467_0    conda-forge
+libnsl                    2.0.0                h7f98852_0    conda-forge
+libogg                    1.3.4                h7f98852_1    conda-forge
+libopenblas               0.3.20          pthreads_h78a6416_0    conda-forge
+libopus                   1.3.1                h7f98852_1    conda-forge
+libpciaccess              0.16                 h516909a_0    conda-forge
+libpng                    1.6.37               h21135ba_2    conda-forge
+libpq                     14.2                 hd57d9b9_0    conda-forge
+libprotobuf               3.20.1               h6239696_0    conda-forge
+librttopo                 1.1.0                hf69c175_9    conda-forge
+libsndfile                1.0.31               h9c3ff4c_1    conda-forge
+libsodium                 1.0.18               h36c2ea0_1    conda-forge
+libsolv                   0.7.22               h6239696_0    conda-forge
+libspatialindex           1.9.3                h9c3ff4c_4    conda-forge
+libspatialite             5.0.1               ha867d66_15    conda-forge
+libssh2                   1.10.0               ha56f1ee_2    conda-forge
+libstdcxx-ng              12.1.0              ha89aaad_16    conda-forge
+libthrift                 0.16.0               h519c5ea_1    conda-forge
+libtiff                   4.4.0                hc85c160_1    conda-forge
+libtool                   2.4.6             h9c3ff4c_1008    conda-forge
+libudev1                  249                  h166bdaf_4    conda-forge
+libutf8proc               2.7.0                h7f98852_0    conda-forge
+libuuid                   2.32.1            h7f98852_1000    conda-forge
+libva                     2.14.0               h7f98852_0    conda-forge
+libvorbis                 1.3.7                h9c3ff4c_0    conda-forge
+libvpx                    1.11.0               h9c3ff4c_3    conda-forge
+libwebp                   1.2.2                h3452ae3_0    conda-forge
+libwebp-base              1.2.2                h7f98852_1    conda-forge
+libxcb                    1.13              h7f98852_1004    conda-forge
+libxkbcommon              1.0.3                he3ba5ed_0    conda-forge
+libxml2                   2.9.12               h885dcf4_1    conda-forge
+libxslt                   1.1.33               h0ef7038_3    conda-forge
+libzip                    1.8.0                h4de3113_1    conda-forge
+libzlib                   1.2.12               h166bdaf_1    conda-forge
+llvm-openmp               14.0.4               he0ac6c6_0    conda-forge
+localtileserver           0.5.8              pyhd8ed1ab_0    conda-forge
+logzero                   1.7.0            py39hf3d152e_2    conda-forge
+lxml                      4.8.0            py39hb9d737c_2    conda-forge
+lz4-c                     1.9.3                h9c3ff4c_1    conda-forge
+lzo                       2.10              h516909a_1000    conda-forge
+mamba                     0.24.0           py39hfa8f2c8_1    conda-forge
+mapclassify               2.4.3              pyhd8ed1ab_0    conda-forge
+markupsafe                2.1.1            py39hb9d737c_1    conda-forge
+matplotlib                3.5.2            py39hf3d152e_0    conda-forge
+matplotlib-base           3.5.2            py39h700656a_0    conda-forge
+matplotlib-inline         0.1.3              pyhd8ed1ab_0    conda-forge
+micawber                  0.5.4              pyhd8ed1ab_0    conda-forge
+mistune                   0.8.4           py39h3811e60_1005    conda-forge
+monotonic                 1.5                        py_0    conda-forge
+morecantile               3.1.2              pyhd8ed1ab_0    conda-forge
+multidict                 6.0.2            py39hb9d737c_1    conda-forge
+munch                     2.5.0                      py_0    conda-forge
+munkres                   1.1.4              pyh9f0ad1d_0    conda-forge
+mysql-common              8.0.29               haf5c9bc_1    conda-forge
+mysql-libs                8.0.29               h28c427c_1    conda-forge
+nbclassic                 0.3.7              pyhd8ed1ab_0    conda-forge
+nbclient                  0.5.13             pyhd8ed1ab_0    conda-forge
+nbconvert                 6.5.0              pyhd8ed1ab_0    conda-forge
+nbconvert-core            6.5.0              pyhd8ed1ab_0    conda-forge
+nbconvert-pandoc          6.5.0              pyhd8ed1ab_0    conda-forge
+nbformat                  5.4.0              pyhd8ed1ab_0    conda-forge
+ncurses                   6.3                  h7f8727e_2
+nest-asyncio              1.5.5              pyhd8ed1ab_0    conda-forge
+netcdf4                   1.5.8           nompi_py39h64b754b_101    conda-forge
+nettle                    3.6                  he412f7d_0    conda-forge
+networkx                  2.8.4              pyhd8ed1ab_0    conda-forge
+notebook                  6.4.12             pyha770c72_0    conda-forge
+notebook-shim             0.1.0              pyhd8ed1ab_0    conda-forge
+nspr                      4.32                 h9c3ff4c_1    conda-forge
+nss                       3.78                 h2350873_0    conda-forge
+numpy                     1.22.4           py39hc58783e_0    conda-forge
+openh264                  2.1.1                h780b84a_0    conda-forge
+openjpeg                  2.4.0                hb52868f_1    conda-forge
+openssl                   1.1.1o               h166bdaf_0    conda-forge
+orc                       1.7.4                h6c59b99_1    conda-forge
+orderedmultidict          1.0.1                      py_0    conda-forge
+osmnx                     1.2.0              pyhd8ed1ab_0    conda-forge
+owslib                    0.25.0             pyhd8ed1ab_0    conda-forge
+packaging                 21.3               pyhd8ed1ab_0    conda-forge
+palettable                3.3.0                      py_0    conda-forge
+pandas                    1.4.2            py39h1832856_2    conda-forge
+pandoc                    2.18                 ha770c72_0    conda-forge
+pandocfilters             1.5.0              pyhd8ed1ab_0    conda-forge
+parquet-cpp               1.5.1                         2    conda-forge
+parso                     0.8.3              pyhd8ed1ab_0    conda-forge
+pcre                      8.45                 h9c3ff4c_0    conda-forge
+pexpect                   4.8.0              pyh9f0ad1d_2    conda-forge
+pickleshare               0.7.5                   py_1003    conda-forge
+pillow                    9.1.1            py39hae2aec6_1    conda-forge
+pip                       21.2.4           py39h06a4308_0
+pixman                    0.40.0               h36c2ea0_0    conda-forge
+plotly                    5.8.2              pyhd8ed1ab_0    conda-forge
+poppler                   22.04.0              h1434ded_1    conda-forge
+poppler-data              0.4.11               hd8ed1ab_0    conda-forge
+postgresql                14.2                 h2510834_0    conda-forge
+posthog                   1.4.8              pyhd8ed1ab_0    conda-forge
+proj                      9.0.0                h93bde94_1    conda-forge
+prometheus_client         0.14.1             pyhd8ed1ab_0    conda-forge
+prompt-toolkit            3.0.29             pyha770c72_0    conda-forge
+protobuf                  3.20.1           py39h5a03fae_0    conda-forge
+pscript                   0.7.5              pyhd3deb0d_0    conda-forge
+psutil                    5.9.1            py39hb9d737c_0    conda-forge
+pthread-stubs             0.4               h36c2ea0_1001    conda-forge
+ptyprocess                0.7.0              pyhd3deb0d_0    conda-forge
+pulseaudio                14.0                 hbc9ff1d_7    conda-forge
+pure_eval                 0.2.2              pyhd8ed1ab_0    conda-forge
+pyarrow                   6.0.1           py39h42d110c_19_cpu    conda-forge
+pyasn1                    0.4.8                      py_0    conda-forge
+pyasn1-modules            0.2.7                      py_0    conda-forge
+pybind11-abi              4                    hd8ed1ab_3    conda-forge
+pycosat                   0.6.3           py39hb9d737c_1010    conda-forge
+pycparser                 2.21               pyhd8ed1ab_0    conda-forge
+pycrs                     1.0.2                      py_0    conda-forge
+pydantic                  1.9.1            py39hb9d737c_0    conda-forge
+pydeck                    0.7.1              pyh6c4a22f_0    conda-forge
+pygis                     0.2.0              pyhd8ed1ab_1    conda-forge
+pygments                  2.12.0             pyhd8ed1ab_0    conda-forge
+pyopenssl                 22.0.0             pyhd8ed1ab_0    conda-forge
+pyparsing                 3.0.9              pyhd8ed1ab_0    conda-forge
+pyproj                    3.3.1            py39hcadae2f_0    conda-forge
+pyqt                      5.15.4           py39h5a03fae_0    conda-forge
+pyqt5-sip                 12.9.0           py39h5a03fae_0    conda-forge
+pyrsistent                0.18.1           py39hb9d737c_1    conda-forge
+pyshp                     2.3.0              pyhd8ed1ab_0    conda-forge
+pysocks                   1.7.1            py39hf3d152e_5    conda-forge
+pystac                    1.4.0              pyhd8ed1ab_0    conda-forge
+pystac-client             0.4.0              pyhd8ed1ab_0    conda-forge
+python                    3.9.13          h9a8a25e_0_cpython    conda-forge
+python-box                6.0.2              pyhd8ed1ab_0    conda-forge
+python-dateutil           2.8.2              pyhd8ed1ab_0    conda-forge
+python-fastjsonschema     2.15.3             pyhd8ed1ab_0    conda-forge
+python-mss                6.1.0              pyhd3deb0d_0    conda-forge
+python_abi                3.9                      2_cp39    conda-forge
+pytz                      2022.1             pyhd8ed1ab_0    conda-forge
+pyu2f                     0.1.5              pyhd8ed1ab_0    conda-forge
+pyyaml                    6.0              py39hb9d737c_4    conda-forge
+pyzmq                     23.1.0           py39headdf64_0    conda-forge
+qt-main                   5.15.2               hdf1cb14_3    conda-forge
+rasterio                  1.2.10           py39h2e4b6e6_5    conda-forge
+ratelim                   0.1.6                      py_2    conda-forge
+re2                       2022.04.01           h27087fc_0    conda-forge
+readline                  8.1.2                h7f8727e_1
+reproc                    14.2.3               h7f98852_0    conda-forge
+reproc-cpp                14.2.3               h9c3ff4c_0    conda-forge
+requests                  2.28.0             pyhd8ed1ab_0    conda-forge
+requests-toolbelt         0.9.1                      py_0    conda-forge
+rio-cogeo                 3.2.0              pyhd8ed1ab_0    conda-forge
+rioxarray                 0.11.1             pyhd8ed1ab_0    conda-forge
+rsa                       4.8                pyhd8ed1ab_0    conda-forge
+rtree                     1.0.0            py39hb102c33_1    conda-forge
+ruamel.yaml               0.17.21          py39hb9d737c_1    conda-forge
+ruamel.yaml.clib          0.2.6            py39hb9d737c_1    conda-forge
+ruamel_yaml               0.15.80         py39hb9d737c_1007    conda-forge
+s2n                       1.0.10               h9b69904_0    conda-forge
+sankee                    0.0.7              pyhd8ed1ab_0    conda-forge
+scikit-learn              1.1.1            py39h4037b75_0    conda-forge
+scipy                     1.8.1            py39he49c0e8_0    conda-forge
+scooby                    0.5.12             pyhd8ed1ab_0    conda-forge
+send2trash                1.8.0              pyhd8ed1ab_0    conda-forge
+server-thread             0.1.0              pyhd8ed1ab_0    conda-forge
+setuptools                61.2.0           py39h06a4308_0
+shapely                   1.8.2            py39h73b9895_1    conda-forge
+simplejson                3.17.6           py39hb9d737c_1    conda-forge
+sip                       6.5.1            py39he80948d_2    conda-forge
+six                       1.16.0             pyh6c4a22f_0    conda-forge
+snappy                    1.1.9                hbd366e4_1    conda-forge
+sniffio                   1.2.0            py39hf3d152e_3    conda-forge
+snuggs                    1.4.7                      py_0    conda-forge
+soupsieve                 2.3.1              pyhd8ed1ab_0    conda-forge
+sqlite                    3.38.5               h4ff8645_0    conda-forge
+stack_data                0.3.0              pyhd8ed1ab_0    conda-forge
+stringcase                1.2.0                      py_0    conda-forge
+svt-av1                   0.9.1                h27087fc_0    conda-forge
+tabulate                  0.8.9              pyhd8ed1ab_0    conda-forge
+tenacity                  8.0.1              pyhd8ed1ab_0    conda-forge
+terminado                 0.15.0           py39hf3d152e_0    conda-forge
+threadpoolctl             3.1.0              pyh8a188c0_0    conda-forge
+tiledb                    2.8.3                h1e4a385_1    conda-forge
+tinycss2                  1.1.1              pyhd8ed1ab_0    conda-forge
+tk                        8.6.12               h1ccaba5_0
+toml                      0.10.2             pyhd8ed1ab_0    conda-forge
+toolz                     0.11.2             pyhd8ed1ab_0    conda-forge
+tornado                   6.1              py39hb9d737c_3    conda-forge
+tqdm                      4.64.0             pyhd8ed1ab_0    conda-forge
+traitlets                 5.2.2.post1        pyhd8ed1ab_0    conda-forge
+traittypes                0.2.1              pyh9f0ad1d_2    conda-forge
+typing-extensions         4.2.0                hd8ed1ab_1    conda-forge
+typing_extensions         4.2.0              pyha770c72_1    conda-forge
+tzcode                    2022a                h166bdaf_0    conda-forge
+tzdata                    2022a                hda174b7_0
+unicodedata2              14.0.0           py39hb9d737c_1    conda-forge
+uritemplate               3.0.1                      py_0    conda-forge
+urllib3                   1.26.9             pyhd8ed1ab_0    conda-forge
+validators                0.18.2             pyhd3deb0d_0    conda-forge
+vega_datasets             0.9.0              pyhd3deb0d_0    conda-forge
+voila                     0.3.5              pyhd8ed1ab_0    conda-forge
+wcwidth                   0.2.5              pyh9f0ad1d_2    conda-forge
+webencodings              0.5.1                      py_1    conda-forge
+websocket-client          1.3.2              pyhd8ed1ab_0    conda-forge
+websockets                10.3             py39hb9d737c_0    conda-forge
+werkzeug                  2.1.2              pyhd8ed1ab_1    conda-forge
+wheel                     0.37.1             pyhd3eb1b0_0
+whitebox                  2.1.2              pyhd8ed1ab_0    conda-forge
+whiteboxgui               0.7.0              pyhd8ed1ab_0    conda-forge
+widgetsnbextension        3.6.0            py39hf3d152e_0    conda-forge
+x264                      1!161.3030           h7f98852_1    conda-forge
+x265                      3.5                  h924138e_3    conda-forge
+xarray                    2022.3.0           pyhd8ed1ab_0    conda-forge
+xerces-c                  3.2.3                h8ce2273_4    conda-forge
+xorg-fixesproto           5.0               h7f98852_1002    conda-forge
+xorg-kbproto              1.0.7             h7f98852_1002    conda-forge
+xorg-libice               1.0.10               h7f98852_0    conda-forge
+xorg-libsm                1.2.3             hd9c2040_1000    conda-forge
+xorg-libx11               1.7.2                h7f98852_0    conda-forge
+xorg-libxau               1.0.9                h7f98852_0    conda-forge
+xorg-libxdmcp             1.1.3                h7f98852_0    conda-forge
+xorg-libxext              1.3.4                h7f98852_1    conda-forge
+xorg-libxfixes            5.0.3             h7f98852_1004    conda-forge
+xorg-libxrender           0.9.10            h7f98852_1003    conda-forge
+xorg-renderproto          0.11.1            h7f98852_1002    conda-forge
+xorg-xextproto            7.3.0             h7f98852_1002    conda-forge
+xorg-xproto               7.0.31            h7f98852_1007    conda-forge
+xyzservices               2022.4.0           pyhd8ed1ab_0    conda-forge
+xz                        5.2.5                h7f8727e_1
+yaml                      0.2.5                h7f98852_2    conda-forge
+yaml-cpp                  0.7.0                h27087fc_1    conda-forge
+yarl                      1.7.2            py39hb9d737c_2    conda-forge
+zeromq                    4.3.4                h9c3ff4c_1    conda-forge
+zipp                      3.8.0              pyhd8ed1ab_0    conda-forge
+zlib                      1.2.12               h166bdaf_1    conda-forge
+zstd                      1.5.2                h8a70e8d_1    conda-forge
+</code></pre></div></td></tr></table></div>
+<h2 id="credits">Credits<a class="headerlink" href="#credits" title="Permanent link">&para;</a></h2>
+<p>This package was created with <a href="https://github.com/cookiecutter/cookiecutter">Cookiecutter</a> and the <a href="https://github.com/giswqs/pypackage">giswqs/pypackage</a> project template.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    2025-06-08
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.instant", "search.highlight"], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
