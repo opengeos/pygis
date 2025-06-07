@@ -9,6 +9,7 @@ geemap
 geopandas
 hypercoast
 ipykernel
+jupyter-server-proxy
 # kaleido
 leafmap
 mapclassify
