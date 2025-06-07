@@ -44,11 +44,11 @@ ENV PROJ_LIB=$CONDA_DIR/share/proj \
     GDAL_DATA=$CONDA_DIR/share/gdal \
     LOCALTILESERVER_CLIENT_PREFIX='proxy/{port}'
 
-# # ------------------------------
-# # 4. Copy source code after env setup
-# # ------------------------------
-# COPY . /home/jovyan/pygis
-# WORKDIR /home/jovyan/pygis
+# ------------------------------
+# 4. Copy source code after env setup
+# ------------------------------
+COPY . /home/jovyan/pygis
+WORKDIR /home/jovyan/pygis
 
 # ------------------------------
 # 5. Install geospatial from source

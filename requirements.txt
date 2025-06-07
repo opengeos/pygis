@@ -1,45 +1,11 @@
 # --find-links https://girder.github.io/large_image_wheels GDAL
 bokeh
 ffmpeg-python
-gdown
 geeadd
-geedim>=1.6.1
-geemap>=0.35.1
-geojson
-geopandas
-ipynb-py-convert
-# kaleido
-leafmap>=0.42.4
-localtileserver>=0.10.0
-mapclassify>=2.4.0
-mss
-netcdf4
-osmnx
-overturemaps
-owslib
-palettable
-plotly
+geedim
+geemap
+kaleido
+leafmap
+mapclassify
 pycrs
-retry
-rio-cogeo
 rioxarray
-sankee
-whiteboxgui
-# keplergl
-# datapane
-# pydeck
-# here-map-widget-for-jupyter
-# voila
-# ipython>=7.34.0
-# ipykernel>=6.15.1
-# debugpy>=1.6.2
-# lxml>=4.9.1
-# ipygany
-# ipyvtklink
-# laspy
-# panel
-# psycopg2
-# pydeck
-# pyntcloud[LAS]
-# pyvista
-# sqlalchemy
