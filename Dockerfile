@@ -29,7 +29,7 @@ RUN mamba install -n base -c conda-forge -y \
     && mamba clean --all --yes \
     && fix-permissions $CONDA_DIR
 
-RUN mamba install -c conda-forge --force-reinstall gdal
+RUN mamba install -c conda-forge gdal==3.11.0 -y
 
 # ------------------------------
 # 2b. Create missing sqlite symlinks (after files exist)
@@ -62,6 +62,13 @@ RUN pip install -U . && \
     mkdir -p /home/jovyan/work && \
     fix-permissions /home/jovyan && \
     rm -rf /home/jovyan/pygis
+
+# ------------------------------
+# 6. Fix permissions and switch back to default user
+# ------------------------------
+# RUN chown -R $NB_UID:$NB_GID $CONDA_DIR && \
+#     chmod -R ug+rwX $CONDA_DIR
+
 
 # ------------------------------
 # 6. Switch back to default user
