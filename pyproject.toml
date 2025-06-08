@@ -35,6 +35,10 @@ exclude = ["docs*"]
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
 
+[project.optional-dependencies]
+raster = ["rasterio", "fiona"]
+all = ["rasterio", "fiona", "kaleido"]
+
 [tool.distutils.bdist_wheel]
 universal = true
 

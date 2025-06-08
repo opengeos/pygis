@@ -2,7 +2,7 @@
 duckdb
 earthaccess
 ffmpeg-python
-fiona
+# fiona
 geeadd
 geedim
 geemap
@@ -19,7 +19,7 @@ numpy
 pandas
 planetary-computer
 pmtiles
-rasterio
+# rasterio
 rioxarray
 shapely
 solara
