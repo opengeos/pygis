@@ -34,9 +34,9 @@ RUN mamba install -n base -c conda-forge -y \
     && mamba clean --all --yes \
     && fix-permissions $CONDA_DIR
 
-RUN pip install -U --find-links https://girder.github.io/large_image_wheels GDAL && \
-    ln -s $CONDA_DIR/share/bash-completion/completions/gdal /etc/bash_completion.d/gdal && \
-    echo 'source /etc/bash_completion' >> /etc/bash.bashrc
+# RUN pip install -U --find-links https://girder.github.io/large_image_wheels GDAL && \
+#     ln -s $CONDA_DIR/share/bash-completion/completions/gdal /etc/bash_completion.d/gdal && \
+#     echo 'source /etc/bash_completion' >> /etc/bash.bashrc
 # ------------------------------
 # 2b. Create missing sqlite symlinks (after files exist)
 # ------------------------------
