@@ -16,9 +16,7 @@ RUN apt-get update && \
     && apt-get clean && rm -rf /var/lib/apt/lists/* && \
     ln -s $CONDA_DIR/share/bash-completion/completions/gdal /etc/bash_completion.d/gdal && \
     echo 'source /etc/bash_completion' >> /etc/bash.bashrc
-# ------------------------------
-# 2. Install conda packages into base env
-# ------------------------------
+
 # ------------------------------
 # 2. Install conda packages into base env
 # ------------------------------
@@ -41,7 +39,7 @@ RUN ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so
  && ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so.0
 
 # ------------------------------
-# 3. Set geospatial environment variables
+# 3. Set pygis environment variables
 # ------------------------------
 ENV PROJ_LIB=$CONDA_DIR/share/proj \
     GDAL_DATA=$CONDA_DIR/share/gdal \
@@ -54,7 +52,7 @@ COPY . /home/jovyan/pygis
 WORKDIR /home/jovyan/pygis
 
 # ------------------------------
-# 5. Install geospatial from source
+# 5. Install pygis from source
 # ------------------------------
 # Prevent version resolution errors in CI
 ENV SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYGIS=0.0.0
