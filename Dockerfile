@@ -20,7 +20,7 @@ RUN apt-get update && \
 # ------------------------------
 RUN mamba install -n base -c conda-forge -y \
     "gdal>=3.11" \
-    "pygis>=0.9.2" \
+    pygis \
     && mamba clean --all --yes \
     && fix-permissions $CONDA_DIR
 
