@@ -13,9 +13,7 @@ RUN apt-get update && \
         bash \
         bash-completion \
         git \
-    && apt-get clean && rm -rf /var/lib/apt/lists/* && \
-    ln -s $CONDA_DIR/share/bash-completion/completions/gdal /etc/bash_completion.d/gdal && \
-    echo 'source /etc/bash_completion' >> /etc/bash.bashrc
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # ------------------------------
 # 2. Install conda packages into base env
@@ -25,13 +23,20 @@ RUN mamba install -n base -c conda-forge -y \
     proj \
     geos \
     pyproj \
-    rasterio \
+    earthaccess \
     fiona \
+    geedim \
+    hypercoast \
+    python-kaleido \
+    leafmap \
+    rasterio \
+    rioxarray \
     && mamba clean --all --yes \
     && fix-permissions $CONDA_DIR
 
-RUN mamba install -c conda-forge gdal==3.11.0 -y
-
+RUN pip install -U --find-links https://girder.github.io/large_image_wheels GDAL && \
+    ln -s $CONDA_DIR/share/bash-completion/completions/gdal /etc/bash_completion.d/gdal && \
+    echo 'source /etc/bash_completion' >> /etc/bash.bashrc
 # ------------------------------
 # 2b. Create missing sqlite symlinks (after files exist)
 # ------------------------------
@@ -57,7 +62,7 @@ WORKDIR /home/jovyan/pygis
 # Prevent version resolution errors in CI
 ENV SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYGIS=0.0.0
 
-RUN pip install -U .[plot] && \
+RUN pip install -U . && \
     rm -rf ./build ./dist *.egg-info && \
     mkdir -p /home/jovyan/work && \
     fix-permissions /home/jovyan && \
