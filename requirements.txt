@@ -1,13 +1,13 @@
 # --find-links https://girder.github.io/large_image_wheels GDAL
 duckdb
-earthaccess
+# earthaccess
 ffmpeg-python
 # fiona
 geeadd
 geedim
 geemap
 geopandas
-hypercoast
+# hypercoast
 ipykernel
 jupyter-server-proxy
 # kaleido
