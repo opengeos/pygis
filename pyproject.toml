@@ -36,7 +36,7 @@ exclude = ["docs*"]
 dependencies = {file = ["requirements.txt"]}
 
 [project.optional-dependencies]
-raster = ["rasterio", "fiona", "rioxarray"]
+raster = ["rasterio", "fiona", "rioxarray", "earthaccess"]
 all = ["pygis[raster]", "kaleido"]
 
 [tool.distutils.bdist_wheel]
