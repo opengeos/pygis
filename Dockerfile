@@ -78,6 +78,6 @@ WORKDIR /home/jovyan
 
 # ------------------------------
 # Usage:
-# docker pull ghcr.io/opengeos/pygis:latest
-# docker run -it -p 8888:8888 -v $(pwd):/home/jovyan/work ghcr.io/opengeos/pygis:latest
+# docker pull giswqs/pygis:latest
+# docker run -it -p 8888:8888 -v $(pwd):/home/jovyan/work giswqs/pygis:latest
 # ------------------------------

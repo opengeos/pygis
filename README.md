@@ -15,3 +15,10 @@
 - Documentation: https://pygis.gishub.org
 
 [![](https://i.imgur.com/bKFts2R.png)](https://pygis.gishub.org)
+
+To use pygis with Docker, you can pull the image from Docker Hub:
+
+```bash
+docker pull giswqs/pygis:latest
+docker run -it -p 8888:8888 -v $(pwd):/home/jovyan/work giswqs/pygis:latest
+```
