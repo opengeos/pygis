@@ -36,8 +36,8 @@ exclude = ["docs*"]
 dependencies = {file = ["requirements.txt"]}
 
 [project.optional-dependencies]
-raster = ["rasterio", "fiona"]
-all = ["rasterio", "fiona", "kaleido"]
+raster = ["rasterio", "fiona", "rioxarray"]
+all = ["pygis[raster]", "kaleido"]
 
 [tool.distutils.bdist_wheel]
 universal = true
