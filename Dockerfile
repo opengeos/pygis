@@ -10,9 +10,12 @@ USER root
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+        bash \
+        bash-completion \
         git \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
-
+    && apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    ln -s $CONDA_DIR/share/bash-completion/completions/gdal /etc/bash_completion.d/gdal && \
+    echo 'source /etc/bash_completion' >> /etc/bash.bashrc
 # ------------------------------
 # 2. Install conda packages into base env
 # ------------------------------
@@ -35,7 +38,8 @@ RUN mamba install -c conda-forge gdal==3.11.0 -y
 # 2b. Create missing sqlite symlinks (after files exist)
 # ------------------------------
 RUN ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so \
- && ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so.0
+ && ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so.0 
+
 
 
 # ------------------------------
