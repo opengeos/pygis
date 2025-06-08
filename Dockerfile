@@ -10,27 +10,17 @@ USER root
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        bash \
-        bash-completion \
-        git \
+    bash \
+    bash-completion \
+    git \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # ------------------------------
 # 2. Install conda packages into base env
 # ------------------------------
 RUN mamba install -n base -c conda-forge -y \
-    gdal \
-    proj \
-    geos \
-    pyproj \
-    earthaccess \
-    fiona \
-    geedim \
-    hypercoast \
-    python-kaleido \
-    leafmap \
-    rasterio \
-    rioxarray \
+    "gdal>=3.11" \
+    pygis \
     && mamba clean --all --yes \
     && fix-permissions $CONDA_DIR
 
@@ -41,7 +31,7 @@ RUN mamba install -n base -c conda-forge -y \
 # 2b. Create missing sqlite symlinks (after files exist)
 # ------------------------------
 RUN ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so \
- && ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so.0
+    && ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so.0
 
 # ------------------------------
 # 3. Set pygis environment variables
