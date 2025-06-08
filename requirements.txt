@@ -20,7 +20,7 @@ pandas
 planetary-computer
 pmtiles
 # rasterio
-rioxarray
+# rioxarray
 shapely
 solara
 voila
