@@ -31,7 +31,9 @@ RUN mamba install -n base -c conda-forge -y \
 # 2b. Create missing sqlite symlinks (after files exist)
 # ------------------------------
 RUN ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so \
-    && ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so.0
+    && ln -s $CONDA_PREFIX/lib/libsqlite3.so.3.50.0 $CONDA_PREFIX/lib/libsqlite3.so.0 \
+    && sed -i 's/"display_name": ".*"/"display_name": "Python 3"/' $CONDA_DIR/share/jupyter/kernels/python3/kernel.json
+
 
 # ------------------------------
 # 3. Set pygis environment variables
