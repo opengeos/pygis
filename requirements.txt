@@ -5,13 +5,13 @@ ffmpeg-python
 # fiona
 geeadd
 # geedim
-geemap
+geemap>=0.35.3
 geopandas
 # hypercoast
 ipykernel
 jupyter-server-proxy
 # kaleido
-leafmap
+leafmap>=0.48.0
 mapclassify
 maplibre
 mapwidget
