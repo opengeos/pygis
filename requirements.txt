@@ -2,7 +2,7 @@
 duckdb
 # earthaccess
 ffmpeg-python
-fiona
+# fiona
 geeadd
 geedim
 geemap
