@@ -57,7 +57,7 @@ WORKDIR /home/jovyan/pygis
 # Prevent version resolution errors in CI
 ENV SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYGIS=0.0.0
 
-RUN pip install -U . && \
+RUN pip install -U .[plot] && \
     rm -rf ./build ./dist *.egg-info && \
     mkdir -p /home/jovyan/work && \
     fix-permissions /home/jovyan && \
