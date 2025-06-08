@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pygis"
-version = "0.9.3"
+version = "0.9.4"
 dynamic = [
     "dependencies",
 ]
@@ -45,7 +45,7 @@ all = ["pygis[raster,vector]"]
 universal = true
 
 [tool.bumpversion]
-current_version = "0.9.3"
+current_version = "0.9.4"
 commit = true
 tag = true
 
