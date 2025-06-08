@@ -22,3 +22,10 @@ To use pygis with Docker, you can pull the image from Docker Hub:
 docker pull giswqs/pygis:latest
 docker run -it -p 8888:8888 -v $(pwd):/home/jovyan/work giswqs/pygis:latest
 ```
+
+To build the Docker image from scratch using the Dockerfile in the root directory, you can run:
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 -t giswqs/pygis:latest .
+docker push giswqs/pygis:latest
+```
