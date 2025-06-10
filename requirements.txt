@@ -19,6 +19,7 @@ numpy
 pandas
 planetary-computer
 pmtiles
+pooch
 # rasterio
 # rioxarray
 shapely
