@@ -36,10 +36,11 @@ exclude = ["docs*"]
 dependencies = {file = ["requirements.txt"]}
 
 [project.optional-dependencies]
-raster = ["rasterio", "rioxarray", "earthaccess", "hypercoast", "geedim"]
+raster = ["rasterio", "rioxarray", "earthaccess", "hypercoast", "geedim", "py3dep"]
+lidar = ["laspy[lazrs,laszip]", "pyntcloud[LAS]", "pyvista[all]"]
 vector = ["overturemaps", "fiona"]
 plot = ["pygis[all]", "kaleido"]
-all = ["pygis[raster,vector]"]
+all = ["pygis[raster,vector,lidar]"]
 
 [tool.distutils.bdist_wheel]
 universal = true
