@@ -55,6 +55,7 @@ WORKDIR /home/jovyan/pygis
 ENV SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYGIS=0.0.0
 
 RUN pip install -U . && \
+    python -m bash_kernel.install && \
     rm -rf ./build ./dist *.egg-info && \
     mkdir -p /home/jovyan/work && \
     fix-permissions /home/jovyan && \
