@@ -13,6 +13,7 @@ RUN apt-get update && \
     bash \
     bash-completion \
     git \
+    unzip \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # ------------------------------
