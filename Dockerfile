@@ -20,8 +20,10 @@ RUN apt-get update && \
 # 2. Install conda packages into base env
 # ------------------------------
 RUN mamba install -n base -c conda-forge -y \
-    "gdal>=3.11" \
+    gdal \
     pygis \
+    rasterio \
+    rioxarray \
     && mamba clean --all --yes \
     && fix-permissions $CONDA_DIR
 
@@ -43,24 +45,16 @@ ENV PROJ_LIB=$CONDA_DIR/share/proj \
     GDAL_DATA=$CONDA_DIR/share/gdal \
     LOCALTILESERVER_CLIENT_PREFIX='proxy/{port}'
 
-# ------------------------------
-# 4. Copy source code after env setup
-# ------------------------------
-COPY . /home/jovyan/pygis
-WORKDIR /home/jovyan/pygis
 
 # ------------------------------
 # 5. Install pygis from source
 # ------------------------------
 # Prevent version resolution errors in CI
-ENV SETUPTOOLS_SCM_PRETEND_VERSION_FOR_PYGIS=0.0.0
 
-RUN pip install -U . && \
-    python -m bash_kernel.install && \
+RUN python -m bash_kernel.install && \
     rm -rf ./build ./dist *.egg-info && \
     mkdir -p /home/jovyan/work && \
-    fix-permissions /home/jovyan && \
-    rm -rf /home/jovyan/pygis
+    fix-permissions /home/jovyan
 
 # ------------------------------
 # 6. Fix permissions and switch back to default user
@@ -77,6 +71,8 @@ WORKDIR /home/jovyan
 
 # ------------------------------
 # Usage:
+# docker build -t giswqs/pygis:latest .
+# docker buildx build --platform linux/amd64,linux/arm64 -t giswqs/pygis:latest --push .
 # docker pull giswqs/pygis:latest
 # docker run -it -p 8888:8888 -v $(pwd):/home/jovyan/work giswqs/pygis:latest
 # ------------------------------
