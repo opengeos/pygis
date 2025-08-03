@@ -1,0 +1,17 @@
+# Exclude everything under docs
+docs/*
+
+
+# Optionally exclude other common files
+.git
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints
+.env
+.DS_Store
+tests/
+build/
+dist/
+*.egg-info/
