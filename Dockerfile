@@ -72,7 +72,7 @@ WORKDIR /home/jovyan
 # ------------------------------
 # Usage:
 # docker build -t giswqs/pygis:latest .
-# docker buildx build --platform linux/amd64,linux/arm64 -t giswqs/pygis:latest --push .    
+# docker buildx build --platform linux/amd64,linux/arm64 -t giswqs/pygis:latest --push .
 # docker pull giswqs/pygis:latest
 # docker run -it -p 8888:8888 -v $(pwd):/home/jovyan/work giswqs/pygis:latest
 # ------------------------------
