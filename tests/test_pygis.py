@@ -2,7 +2,6 @@
 
 """Tests for `pygis` package."""
 
-
 import unittest
 
 from pygis import pygis
